@@ -1,0 +1,136 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ── Print styles ─────────────────────────────────────────────────── */
+@media print {
+  /* Ocultar chrome de la app */
+  aside,
+  header,
+  .print-hide {
+    display: none !important;
+  }
+
+  /* Resetear restricciones de layout del shell */
+  html,
+  body {
+    overflow: visible !important;
+    height: auto !important;
+    background: white !important;
+  }
+
+  div,
+  main {
+    overflow: visible !important;
+    height: auto !important;
+    max-height: none !important;
+  }
+
+  main {
+    padding: 0 !important;
+  }
+
+  /* Preservar colores de fondo en tablas y badges */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Tipografía base */
+  body {
+    font-size: 10pt;
+    color: #111827;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  /* Título principal */
+  h1 {
+    font-size: 18pt;
+    font-weight: 700;
+    margin-bottom: 4pt;
+  }
+
+  h2 {
+    font-size: 11pt;
+    font-weight: 600;
+  }
+
+  /* Sección cards */
+  .rounded-xl {
+    border: 1px solid #d1d5db !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    margin-bottom: 14pt !important;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .shadow-sm {
+    box-shadow: none !important;
+  }
+
+  /* Tablas */
+  table {
+    border-collapse: collapse !important;
+    width: 100% !important;
+    font-size: 9pt !important;
+  }
+
+  thead {
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  th {
+    background-color: #f9fafb !important;
+    padding: 5px 8px !important;
+    border: 1px solid #d1d5db !important;
+    font-size: 8pt !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.04em !important;
+    color: #6b7280 !important;
+    text-align: left !important;
+  }
+
+  td {
+    padding: 5px 8px !important;
+    border: 1px solid #e5e7eb !important;
+    vertical-align: top !important;
+    font-size: 9pt !important;
+    word-break: break-word !important;
+  }
+
+  /* Espaciado entre secciones */
+  .space-y-6 > * + * {
+    margin-top: 0 !important;
+  }
+
+  .p-6 {
+    padding: 0 !important;
+  }
+}
+
