@@ -6,7 +6,7 @@ Sistema interno de cálculo y gestión de sueros vitamínicos. Permite administr
 
 ## 🖥️ Capturas del sistema
 
-### 🖥️ Capturas del sistema
+### 🖥️ Login
 ![Login](docs/screenshots/login.jpeg)
 
 ### 📊 Dashboard
