@@ -4,6 +4,25 @@ Sistema interno de cálculo y gestión de sueros vitamínicos. Permite administr
 
 ---
 
+## 🖥️ Capturas del sistema
+
+### 📊 Dashboard
+![Dashboard](docs/screenshots/dashboard.jpeg)
+
+### 💊 Productos
+![Productos](docs/screenshots/product.jpeg)
+
+### 🧠 Síntomas
+![Síntomas](docs/screenshots/sintomas.jpeg)
+
+### 🧮 Cálculo de suero
+![Cálculo](docs/screenshots/calculation.jpeg)
+
+### 📜 Historial
+![Historial](docs/screenshots/historial.jpeg)
+
+---
+
 ## Stack
 
 | Capa | Tecnología |
